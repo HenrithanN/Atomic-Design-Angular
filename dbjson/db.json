@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Phone XL",
+      "description": "Um celular grande, com uma das melhores telas",
+      "price":800,
+      "image":"https://th.bing.com/th/id/R9a7585ec4f1ee17847983c37c55f1ece?rik=NBw1ZQWZ3pyMAw&pid=ImgRaw"
+    },
+    {
+      "id": 2,
+      "name": "Phone Mini",
+      "description": "Um ótimo celular, com uma das melhores câmeras!",
+      "price":600,
+      "image":"https://cdn.chv.me/images/OVevUZSI.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Phone Standard",
+      "description": "",
+      "price":500,
+      "image":"https://i5.walmartimages.com/asr/04741db4-6dc9-4372-acf6-1e6e1eb0d13a_1.926b3fed422b25618a84a0a913707679.jpeg"
+    }
+  ],
+  "precoEnvio": [
+    {
+      "type": "Overnight",
+      "price": 25.99
+    },
+    {
+      "type": "2-Day",
+      "price": 9.99
+    },
+    {
+      "type": "Postal",
+      "price": 2.99
+    }
+  ]
+}
