@@ -1,0 +1,14 @@
+<app-informacoes titulo="Carrinho"></app-informacoes>
+<div *ngIf="items[0]">
+<app-primary-button tamanho="true"  conteudo="Precos de Envio" [routerLink]="['/precosDeEnvios']"></app-primary-button>
+</div>
+
+<app-item-carrinho [items]="items" [precoDeEnvio]="precoDeEnvio"></app-item-carrinho>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+  <app-input typeInput="text" label="Nome" name="nome" formControlName="nome" ngDefaultControl></app-input>
+  <app-input typeInput="text" label="Endereço" name="endereco" formControlName="enderecos" ngDefaultControl></app-input>
+
+  <app-primary-button conteudo="Comprar"></app-primary-button>
+</form>

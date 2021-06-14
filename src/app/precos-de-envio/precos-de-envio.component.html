@@ -1,0 +1,10 @@
+<app-informacoes titulo="Preços de Envio"></app-informacoes>
+<div class="alert alert-secondary d-flex justify-content-between" *ngFor="let precos of precosDeEnvio | async">
+  <app-informacoes descricao="{{ precos.type }}"></app-informacoes>
+  <app-informacoes descricao="{{ precos.price }}"></app-informacoes>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio{{ precos.type }}" checked>
+  <app-primary-button (click)="adicionarAoCarrinho(precos)" [routerLink]="['/carrinho']" tamanho="normal" conteudo="Selecionar" for="btnradio{{ precos.type }}"></app-primary-button>
+
+</div>
+<app-secondary-button conteudo="Voltar" [routerLink]="['/carrinho']"></app-secondary-button>

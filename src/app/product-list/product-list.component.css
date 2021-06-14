@@ -1,0 +1,29 @@
+.container__responsivo{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card{
+  margin: 2rem;
+  border: none;
+}
+@media screen and (min-width: 961px) {
+  .container__responsivo{
+    display: flex;
+  }
+  .card{
+    width: calc(33.33% - 4rem);
+  }
+}
+
+@media (max-width: 960px) {
+  .card{
+    width: calc(50% - 5rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .card{
+    width: 100%;
+  }
+}
+

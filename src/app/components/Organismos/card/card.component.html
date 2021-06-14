@@ -1,0 +1,13 @@
+<div class="container__responsivo">
+  <div class="card" *ngFor="let product of products">
+
+    <app-imagem classe="img-thumbnail" [url]="product.image" descricao="Imagem do Produto"></app-imagem>
+    <app-informacoes list="true" titulo="{{ product.name }}" descricao="{{ product.description }}"></app-informacoes>
+
+    <app-primary-button conteudo="Compartilhar Produto" (click)="onShare()"></app-primary-button>
+
+      <app-primary-button [routerLink]="['/products/' + product.id]" conteudo="Ver Detalhes"></app-primary-button>
+      <app-primary-button *ngIf="product.price > 700" conteudo="Ativar Notificações" (click)="onNotify()"></app-primary-button>
+
+  </div>
+</div>

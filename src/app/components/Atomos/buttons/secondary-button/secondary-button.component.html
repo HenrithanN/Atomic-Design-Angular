@@ -1,0 +1,13 @@
+<!--Botão Grande -->
+<div *ngIf="!tamanho" class="d-grid">
+  <button class="mt-2 btn btn-outline-secondary">
+    {{ conteudo }}
+  </button>
+</div>
+
+<!--Botão Normal-->
+<div *ngIf="tamanho">
+  <button class="mt-2 btn btn-outline-secondary">
+    {{ conteudo }}
+  </button>
+</div>

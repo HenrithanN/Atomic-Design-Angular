@@ -1,0 +1,19 @@
+<app-informacoes titulo="Detalhes do Produto"></app-informacoes>
+<div class="container__responsivo"  *ngIf="product">
+
+  <div class="card container__responsivo--imagem">
+    <app-imagem classe="figure figure-img img-fluid" url="{{ product.image }}" descricao="Imagem do Produto"></app-imagem>
+  </div>
+
+  <div class="container__responsivo--detalhes">
+    <app-informacoes detalhes="true" titulo="Produto: {{product.name}}" descricao="Preço: {{ product.price | currency}}"></app-informacoes>
+
+    <p class="text-muted" *ngIf="product.description">Descrição: {{ product.description }}</p>
+    <p class="text-info" *ngIf="!product.description">Descrição: O anunciante não adicionou uma descrição à esse produto!</p>
+      <div>
+        <app-primary-button conteudo="Adicionar ao Carrinho" (click)="adicionarAoCarrinho(product)"></app-primary-button>
+        <app-secondary-button conteudo="Voltar" [routerLink]="['']"></app-secondary-button>
+      </div>
+  </div>
+
+</div>

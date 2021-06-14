@@ -1,0 +1,16 @@
+.container__responsivo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.container__responsivo--preco-de-envio{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.img__styles{
+  width: 50px;
+  border: 5px solid blue;
+}

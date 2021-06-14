@@ -1,0 +1,41 @@
+.container__responsivo{
+  display: flex;
+}
+.container__responsivo--detalhes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.card{
+  margin: 2rem;
+  border: none;
+}
+@media screen and (min-width: 961px) {
+  .container__responsivo{
+    display: flex;
+  }
+  .card{
+    width: calc(50% - 4rem);
+  }
+}
+
+@media (max-width: 960px) {
+  .card{
+    width: calc(50% - 4rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .card{
+    width: 100%;
+    margin: 0;
+  }
+  .container__responsivo{
+    display: block;
+  }
+  .container__responsivo--detalhes{
+    display: block;
+  }
+}
+

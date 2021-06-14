@@ -1,0 +1,12 @@
+<div class="alert alert-primary container__responsivo" *ngFor="let item of items">
+
+
+  <app-imagem [url]="item.image" [descricao]="item.description"></app-imagem>
+
+  <a [routerLink]="['/products', item.id]">{{ item.name }}</a>
+  <div class="container__responsivo--preco-de-envio" *ngFor="let preco of precoDeEnvio">
+    <app-informacoes descricao="Preço do Produto: {{item.price | currency}}"></app-informacoes>
+    <app-informacoes descricao="Preço de Envio: {{preco.price | currency}}"></app-informacoes>
+    <app-informacoes descricao="Preço Total: {{preco.price + item.price | currency}}"></app-informacoes>
+  </div>
+</div>
